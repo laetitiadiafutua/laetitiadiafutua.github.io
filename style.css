@@ -14,21 +14,21 @@ body {
   background: #ede0d4;
   /* couleur de fonf */
   overflow-x: hidden;
-  /*  */
+
 }
 
 .slider {
   width: 100%;
-  /* largeur de la page */
   height: 100vh;
-  /* hauteur de la page */
-  aspect-ratio: 16/9;
+  aspect-ratio: 16 / 9;
   background-image: url(../fond.jpg);
-  /* image en css - permet de rajouter plus facilement un texte sur l'image */
   background-position: center;
-  /* position de l'image */
   background-size: cover;
-  /* taille de l'image sur le block image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 h1:hover:after {
@@ -96,7 +96,6 @@ h1:hover:after {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-left: 150px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -200,7 +199,7 @@ h2 {
 }
 #about p {
   color: #772f1a ;
-  column-gap: 10px;
+  padding:0 auto;
 
 }
 
@@ -237,6 +236,8 @@ h2 {
 #about {
   height: 100vh;
   text-align: center;
+  padding: 100px;
+  flex-direction: column;
 }
 #projets {
   height: 100vh;
@@ -266,7 +267,10 @@ h2 {
   align-items: center; */
   text-align: center;
   color: #772f1a;
+  transform: rotate(180deg);
 }
+
+
 
 footer p {
   color:#772f1a;
@@ -282,30 +286,50 @@ html {
 #form-container {
   display:flex;
   flex-direction: column;
+  vertical-align: top;
 }
 
 #contact-form {
   flex-direction: column;
-  margin: 30px;
-  width: 100%;
+  width: 46%;
   padding: 15px;
   border: none;
   border-radius: 10px;
   background-color:#d4a373;
-  margin-bottom: 20px;
-  color:#772f1a
+  color:#772f1a;
+  display: flex;
+  margin: 0 auto;
 }
 
-/* .icones {
-  display: flex;
+.icones {
+  display: inline-block;
   gap: 10px;
-  flex-wrap: wrap;
   margin: 20px;
   padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .icones img {
-  margin-bottom: 10px;
-  width: 20px ;
-  height: 20px;
-} */
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+button {
+  display: inline-block;
+  background-color: #d4a373;
+  border-radius: 10px;
+  border: 4px double #772f1a;
+  color: #772f1a;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
