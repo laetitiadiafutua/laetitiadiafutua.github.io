@@ -1,33 +1,102 @@
 * {
-  margin: 0;
+  margin: 0; 
   padding: 0;
+  /* l'espace pour la page */
 }
 
 body {
   font-family: "Inter", sans-serif;
+  /* police de texte */
   max-width: 1440px;
+  /* taille maximale de la page */
   margin: 0 auto;
+  /* definir l'espace exterieur */
   background: #ede0d4;
+  /* couleur de fonf */
   overflow-x: hidden;
+  /*  */
 }
 
 .slider {
   width: 100%;
+  /* largeur de la page */
   height: 100vh;
+  /* hauteur de la page */
   aspect-ratio: 16/9;
   background-image: url(./portfolio-inspi/fond.jpg);
+  /* image en css - permet de rajouter plus facilement un texte sur l'image */
   background-position: center;
+  /* position de l'image */
   background-size: cover;
+  /* taille de l'image sur le block image */
 }
 
+h1:hover:after {
+  content:"";
+  /* après je souhaite que le contenu change*/
+  width: 50%;
+  height: 2px;
+  background-color: #772f1a;
+  /* la couleur de fond de block */
+  position: absolute;
+  /* positionner un element par rapport à son parent */
+  bottom: 0;
+  /* possitionner le texte dans le block */
+  left: 0;
+  /* possitionner le texte dans le block */
+  transition: 0.5s;
+  /* temps et durée d'animation du mouvement*/
+  opacity: 1;
+  /* epaisseur */
+}
+
+.blockfleche {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  /* aligner */
+  justify-content: center;
+  /* centrer le block */
+  align-items: center;
+  /* aligner les elements  */
+    
+}
+.fleche {
+  width: 10px;
+  height: 40px;
+  border-radius: 20px;
+  /* arrondir la bordure */
+  background-color:#99582a;
+  display: inline-block;
+  /* transforme en block afin de modifier  */
+  margin: 6px;
+  animation: move 2s infinite ease-in-out;
+  
+}
+
+.fleche:nth-of-type(1) {
+  transform: rotate(-45deg);
+}
+
+.fleche:nth-of-type(2) {
+  transform: rotate(45deg);
+}
+
+ @keyframes move { 
+  /* style au animation */
+  0%{margin-top: 0;}
+  50%{margin-top: 100px;}
+  100%{margin-top: 0;}
+} 
+
 .dev {
-  width: 92%;
-  height: 80vh;
+  width: 100%;
+  height: 100vh;
   align-items: center;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
-  margin-left: 133px;
+  margin-left: 150px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -35,11 +104,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* definit la façon dans le contenu d'un élémnt remplacé */
 }
 
 h1 {
   font-size: 70px;
-  color: #9c6644;
+  color: #772f1a;
   margin-bottom: 80px;
   font-family: "Open Sans", sans-serif;
 }
@@ -47,11 +117,12 @@ h1 {
   height: 100vh;
   display: flex;
   justify-content: space-evenly;
+  /* espace entre les éléments (flex) */
 }
 
 h2 {
   font-size: 50px;
-  color: #9c6644;
+  color: #772f1a;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -61,12 +132,13 @@ h2 {
   align-items: center;
   padding: 20px;
   font-family: "Open Sans", sans-serif;
-  gap: 15px;
+  gap: 30px;
 }
 
 .w32rubrique:hover {
   cursor: pointer;
   font-size: 30px;
+  color: #9c6644;
 }
 
 .flex1 {
@@ -81,7 +153,7 @@ h2 {
   width: 300px;
   height: 300px;
   border-radius: 50% 50% 0 0;
-  border: 2px #9c6644 solid;
+  border: 2px #772f1a solid;
   position: relative;
 }
 
@@ -97,7 +169,7 @@ h2 {
   width: 300px;
   height: 300px;
   border-radius: 50% 50% 0 0;
-  border: 2px #9c6644 solid;
+  border: 2px #772f1a solid;
   position: relative;
 }
 
@@ -106,10 +178,12 @@ h2 {
   height: 50vh;
   display: flex;
   justify-content: space-evenly;
+  /*  */
   align-items: center;
   /* margin-left: 50px; */
   background-image: url(./portfolio-inspi/flacon-fleurs.jpg);
   background-size: cover;
+  /* taille  */
   width: 300px;
   height: 300px;
   border-radius: 50% 50% 0 0;
@@ -119,56 +193,33 @@ h2 {
 
 .about a {
   position: absolute;
-  color: brown;
+  color: #772f1a;
   text-decoration: none;
   margin-bottom: 30px;
+  top: 220px;
+}
+#about p {
+  color: #772f1a ;
 }
 
 .project a {
   position: absolute;
-  color: brown;
+  color: #772f1a;
   text-decoration: none;
-  bottom: 50px;
+  bottom: 109px;
+    right: 73px;
 }
 
 .contact a {
   position: absolute;
-  color: brown;
+  color: #772f1a;
   text-decoration: none;
-  bottom: 10px;
+  bottom: 110px;
+  right: 115px;
 }
-
 .button {
   width: 100px;
   height: 100px;
-}
-
-.dev a {
-  text-align: center;
-  background-color: pink;
-  /* border-width: initial;
-  border-style: solid; */
-  /* border-color: maroon;
-  border-image: initial;
-  border-radius: 10px; */
-}
-
-.dev a:hover {
-  transform: translate(80px 60px);
-  animation: color-change 3s infinite;
-  transform: scale(1, 5);
-}
-
-@keyframes color-change {
-  0% {
-    color: #9c6644;
-  }
-  50% {
-    color: beige;
-  }
-  100% {
-    color: brown;
-  }
 }
 
 .media {
@@ -178,17 +229,20 @@ h2 {
   background-color: #d4a373;
   align-items: center;
   padding: 20px;
-  color:#9c6644
+  color:#772f1a;
 }
 
 #about {
   height: 100vh;
+  text-align: center;
 }
 #projets {
   height: 100vh;
+  text-align: center;
 }
 #contact {
   height: 100vh;
+  text-align: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -196,4 +250,46 @@ h2 {
     display: flex;
     flex-direction: column;
   }
+}
+
+.flechetop {
+  width:  50px;
+  height: 50px;
+  background-color: #9c6644;
+  bottom: 50px;
+  right: 50px;
+  position: fixed;
+  /* display: fixed;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+  color: #772f1a;
+}
+
+footer p {
+  color:#772f1a;
+}
+p{
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#form-container {
+  display:flex;
+  flex-direction: column;
+}
+
+#contact-form {
+  flex-direction: column;
+  margin: 30px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color:#d4a373;
+  margin-bottom: 20px;
+  color:#772f1a
 }
