@@ -293,3 +293,17 @@ html {
   margin-bottom: 20px;
   color:#772f1a
 }
+
+.icones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 20px;
+}
+
+.icones img {
+  margin-bottom: 10px;
+  width: 20px ;
+  height: 20px;
+}

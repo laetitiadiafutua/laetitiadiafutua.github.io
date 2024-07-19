@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    max-width: 650px ;
+    height: 100vh ;
+    background-color: blueviolet;
+    margin:0 auto;
+    position: relative;
+}
+
+.bulle {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    position: absolute;
+}
+
+#bulle1 {
+    background: linear-gradient(pink,yellow, green);
+    top: 10%;
+    left: 10%;
+}
+#bulle2 {
+    background: linear-gradient(pink,yellow, blue); 
+    bottom:10%;
+    right:10%; 
+}
+.carte {
+    width: 50%;
+    height: 40%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.6); 
+    margin: auto;
+    z-index: 1;
+}
+
+/* .carte name1 {
+    text-align: right;
+}
+.carte name2 {
+    text-align: center;
+} */

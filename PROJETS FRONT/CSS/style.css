@@ -1,0 +1,18 @@
+* {
+    margin:0;
+}
+.Laetitia {
+    width: 200px ;
+    height: 200px;
+    border: solid;
+}
+#plante {
+    background-color: indigo;
+}
+#petale {
+    background-color: blue;
+}
+p {
+    color: orange;
+    width: 30px;
+}
